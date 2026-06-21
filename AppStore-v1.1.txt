@@ -1,0 +1,365 @@
+================================================================================
+FJORDPULSE — APP STORE CONNECT SUBMISSION KIT — VERSION 1.1 UPDATE
+Last edited 2026-06-20
+================================================================================
+
+This is the v1.1 UPDATE. Paste each section into the matching App Store Connect
+field. v1.1 adds: Sign in with Apple & Google, cross-device favorite farms and
+saved searches, live satellite imagery on each farm profile, double-tap-to-map,
+and pull-to-refresh.
+
+IMPORTANT — TWO THINGS CHANGED THE PRIVACY POSTURE SINCE v1.0:
+  1. ACCOUNTS: the app now (optionally) collects an account email + user id to
+     sync favorites/searches. "Does this app collect data?" is now YES.
+  2. ADS: lines tagged [ADS] apply only if THIS build ships with the Google
+     AdMob banner + interstitial. If you hold ads back, delete every [ADS] line
+     and keep the "no ads" wording.
+
+ALSO UPDATE (separately, not App Store Connect fields):
+  • privacy.html on the policies site — it must now disclose the account email/
+    user id (and AdMob, if ads ship). The store privacy answers must match it.
+
+
+--------------------------------------------------------------------------------
+1.  APP NAME (max 30 characters)
+--------------------------------------------------------------------------------
+
+FjordPulse
+
+
+--------------------------------------------------------------------------------
+2.  SUBTITLE (max 30 characters)
+--------------------------------------------------------------------------------
+
+Norwegian salmon farm health
+
+
+--------------------------------------------------------------------------------
+3.  PROMOTIONAL TEXT (max 170 characters — updatable without re-review)
+--------------------------------------------------------------------------------
+
+(166 characters)
+
+Sign in with Apple or Google to save favorite farms and searches across devices. Live sea-lice, disease and temperature from Norway's farms, weekly via BarentsWatch.
+
+
+--------------------------------------------------------------------------------
+4.  DESCRIPTION (max 4000 characters)
+--------------------------------------------------------------------------------
+
+FjordPulse turns the Norwegian government's BarentsWatch fish-health data into a
+clean, mobile-friendly view of the country's entire salmon aquaculture industry
+— every active farm, every reporting week, on one map.
+
+WHAT YOU SEE
+
+• A live map of all active Norwegian salmon farms along the coast, color coded
+  by their current compliance status (healthy / watch / at risk).
+• Per-farm detail: adult female sea lice as a percentage of the 0.5/fish
+  regulatory limit, mobile and stationary lice categories, sea temperature,
+  licensed capacity, environmental ("green") license status, land-based RAS
+  facilities, and the official production area (PO1–PO13).
+• NEW: live satellite imagery of each farm's real location, right on its
+  profile — double-tap it to jump straight to the farm on the map.
+• Twelve-week trend charts for lice and water temperature, with Norway's
+  regulatory threshold drawn on the chart so you can see at a glance whether a
+  farm is trending toward or away from non-compliance.
+• Active treatment timeline: thermal delousing, freshwater bath, in-feed
+  treatments, mechanical removal, cleaner-fish deployments.
+• ILA and PD disease outbreak flags, PD surveillance/protection zone labels,
+  and fish escape events.
+• A national snapshot in the Insights tab: industry-wide lice averages,
+  outbreak counts, water-condition ranges, and municipality hotspots.
+
+NEW IN 1.1 — FAVORITES THAT FOLLOW YOU
+
+• Tap the star on any farm to add it to your favorites, then filter the Farms
+  list to just those. Favorite from the list, the farm profile, or the map.
+• Save a search — your text plus the status filter and sort — and reapply it
+  with a tap.
+• Sign in with Apple or Google (optional) to sync your favorites and saved
+  searches across every device. Signed out, they still work on this device and
+  merge into your account the moment you sign in.
+
+WHO IT'S FOR
+
+• Aquaculture professionals, fish-health technicians and farm operators who
+  want a quick mobile read on conditions across the industry.
+• Investors and analysts tracking salmon producers (Mowi, SalMar, Lerøy,
+  Bakkafrost and others) where lice and disease outbreaks move share prices.
+• Environmental researchers, journalists, and wild-salmon advocates following
+  the impact of farming on Norwegian fjords.
+• Coastal residents, fjord-tourism operators and sport anglers curious about
+  what is happening at farms in their region.
+• Curious individuals.
+
+PRIVACY
+
+FjordPulse works fully without an account. Signing in with Apple or Google is
+optional and only enables syncing your favorite farms and saved searches across
+your devices; to do that we store your account email and a user identifier, and
+nothing more. Farm data comes from BarentsWatch via a small proxy server we
+operate, with Apple App Attest verifying that requests come from a genuine
+install. No personal browsing or location history is collected.
+[ADS] FjordPulse shows ads through Google AdMob, which collects device and usage
+data to deliver them; you can limit personalized ads in iOS Settings.
+Read the full Privacy Policy at https://leetsyplakov.github.io/FjordPulse-policies/.
+
+LANGUAGES
+
+The app ships in Norwegian (default — matches the source data) and English.
+The English mode translates Norwegian place names via Google Translate and
+caches each name on your device so the same name is fetched at most once.
+
+DATA SOURCE
+
+All farm data is from BarentsWatch, the Norwegian government's official marine
+open-data service, refreshed weekly when farms file their reports. FjordPulse is
+an independent app and is not affiliated with BarentsWatch, the Mattilsynet
+(Norwegian Food Safety Authority) or any salmon producer.
+
+INFORMATIONAL USE ONLY
+
+The data in FjordPulse is provided for informational purposes only. It is not
+financial, regulatory, or operational advice. Always consult the primary source
+and qualified professionals before acting on aquaculture data.
+
+
+--------------------------------------------------------------------------------
+5.  KEYWORDS (max 100 characters, comma-separated, no spaces after commas)
+--------------------------------------------------------------------------------
+
+(99 characters)
+
+salmon,aquaculture,fish farm,Norway,sea lice,fjord,BarentsWatch,lakseoppdrett,laks,oppdrett
+
+
+--------------------------------------------------------------------------------
+6.  CATEGORY
+--------------------------------------------------------------------------------
+
+Primary:   Reference
+Secondary: Weather
+
+
+--------------------------------------------------------------------------------
+7.  URLs
+--------------------------------------------------------------------------------
+
+Support URL          https://github.com/leetsyplakov/FjordPulse-policies
+Marketing URL        https://leetsyplakov.github.io/FjordPulse-policies/
+Privacy Policy URL   https://leetsyplakov.github.io/FjordPulse-policies/privacy.html
+
+
+--------------------------------------------------------------------------------
+8.  COPYRIGHT
+--------------------------------------------------------------------------------
+
+© 2026 Andrey Lee Tsyplakov
+
+
+--------------------------------------------------------------------------------
+9.  AGE RATING
+--------------------------------------------------------------------------------
+
+4+ (still fine for v1.1).
+
+There is no violence, profanity, sexual content, gambling, or user-generated
+content. Sign-in does not change the rating.
+[ADS] In AdMob, set the maximum ad content rating to "G" (and enable child-/
+family-safe filtering as appropriate) so served ads stay consistent with a 4+
+rating. With that set, 4+ remains correct.
+
+
+--------------------------------------------------------------------------------
+10. APP PRIVACY (App Store Connect → App Privacy)  ***CHANGED IN 1.1***
+--------------------------------------------------------------------------------
+
+"Does this app collect any data?"  →  YES  (it was NO in 1.0).
+
+Privacy Policy URL:
+  https://leetsyplakov.github.io/FjordPulse-policies/privacy.html
+
+Declare these data types:
+
+ACCOUNT (only when the user signs in — always collected once signed in):
+  • Contact Info → Email Address
+      Used for: App Functionality
+      Linked to the user: YES
+      Used for tracking: NO
+  • Identifiers → User ID
+      Used for: App Functionality
+      Linked to the user: YES
+      Used for tracking: NO
+  (These back the cross-device favorites/searches sync. Matches the app's
+   PrivacyInfo.xcprivacy, which now declares Email Address + User ID for App
+   Functionality, not tracking.)
+
+[ADS] ADVERTISING (only if this build ships with AdMob) — declare per Google's
+"AdMob and the App Store data-collection" guidance:
+  • Identifiers → Device ID
+      Used for: Third-Party Advertising  (and Analytics)
+      Linked: NO (if non-personalized)   Tracking: see ATT note
+  • Usage Data → Advertising Data, Product Interaction
+      Used for: Third-Party Advertising / Analytics
+  • Diagnostics → Crash Data, Performance Data
+      Used for: App Functionality / Analytics
+  ATT NOTE: If you want PERSONALIZED ads (IDFA), you must add an App Tracking
+  Transparency prompt (NSUserTrackingUsageDescription + request) and declare
+  "Used for tracking = YES" on Device ID. If you DON'T add ATT, serve
+  non-personalized ads and declare tracking = NO. The current build has no ATT
+  prompt yet, so default to non-personalized / tracking = NO until ATT is added.
+
+
+--------------------------------------------------------------------------------
+11. WHAT'S NEW IN THIS VERSION (max 4000 characters)
+--------------------------------------------------------------------------------
+
+Version 1.1
+
+Favorites and searches that follow you
+• Sign in with Apple or Google (optional) to save your favorite farms and your
+  saved searches and sync them across all your devices.
+• Tap the star on any farm — from the list, the profile, or the map — to
+  favorite it, and use the Favorites filter to see just those.
+• Save a search (your text, status filter and sort) and reapply it any time.
+• Not signed in? Favorites and searches still work on this device and merge into
+  your account the moment you sign in.
+
+See the real site
+• Every farm profile now shows live satellite imagery of its actual location.
+• Double-tap that view to jump straight to the farm on the map.
+
+Reliability
+• Pull to refresh on the Farms list, plus automatic retry so a brief network
+  hiccup no longer leaves the list empty.
+
+[ADS] • Introduced unobtrusive ads to help support ongoing development and the
+  data server. (Include this line only if this build ships with ads.)
+
+
+--------------------------------------------------------------------------------
+12. APP REVIEW — DEMO INFO  ***UPDATED FOR 1.1***
+--------------------------------------------------------------------------------
+
+Sign-in Required = NO. The app is fully usable without an account; sign-in only
+syncs favorites and saved searches.
+
+Notes for Apple's reviewer:
+
+  FjordPulse is a read-only visualization of Norwegian government open data from
+  BarentsWatch (https://www.barentswatch.no). Network calls go to a small proxy
+  at api.pythonenthusiast.com, authenticated via Apple App Attest on real
+  devices.
+
+  Accounts are OPTIONAL. We offer Sign in with Apple alongside Sign in with
+  Google (Guideline 4.8 compliant). To test sign-in, the reviewer can use their
+  own Apple ID (Sign in with Apple) — no demo account is needed; or skip sign-in
+  entirely and use favorites/searches locally. Signing in only enables
+  cross-device sync of the user's favorite farms and saved searches; we store
+  only the account email and a user identifier.
+
+  [ADS] The app displays Google AdMob banner and interstitial ads. There are no
+  in-app purchases and no user-generated content.
+
+  Source: https://github.com/leetsyplakov/FjordPulse
+  Privacy: https://leetsyplakov.github.io/FjordPulse-policies/privacy.html
+
+
+--------------------------------------------------------------------------------
+13. SCREENSHOTS — REQUIRED SIZES
+--------------------------------------------------------------------------------
+
+iPhone 6.7"   1290 x 2796 px   iPhone 15 Pro Max     REQUIRED (5–10 images)
+iPad 13"      2064 x 2752 px   iPad Pro 13"          required if you ship iPad
+
+Suggested shots for 1.1 (refresh at least one to show the new features):
+  1. Map of Norway with farms colored green/amber/red.
+  2. Farm profile showing the NEW satellite view + lice %, temperature, charts.
+  3. Farm profile with the favorite star highlighted + treatments/regulatory.
+  4. Farms list with the Favorites filter active and the saved-searches menu.
+  5. Settings → Account section (Sign in with Apple / Google buttons).
+  6. Insights tab — industry profile and water conditions.
+
+No real personal data, Xcode debug overlays, or TestFlight watermarks in any
+shot. If a shot shows an account, use a throwaway/blurred email.
+
+
+--------------------------------------------------------------------------------
+14. NORWEGIAN LOCALIZATION (Localization → Norsk)
+--------------------------------------------------------------------------------
+
+App Name        FjordPulse
+Subtitle        Helse for norske lakseanlegg
+
+Promotional text (170 chars max)
+  Logg inn med Apple eller Google for å lagre favorittanlegg og søk på alle
+  enheter. Sanntids lus, sykdom og sjøtemperatur fra norske anlegg, ukentlig
+  fra BarentsWatch.
+
+What's New (Hva er nytt)
+
+  Versjon 1.1
+
+  Favoritter og søk som følger deg
+  • Logg inn med Apple eller Google (valgfritt) for å lagre favorittanlegg og
+    lagrede søk, og synke dem på tvers av alle enhetene dine.
+  • Trykk på stjernen på et anlegg – fra listen, profilen eller kartet – for å
+    gjøre det til favoritt, og bruk Favoritter-filteret for å vise kun disse.
+  • Lagre et søk (tekst, statusfilter og sortering) og bruk det igjen når som
+    helst.
+  • Ikke innlogget? Favoritter og søk fungerer fortsatt på denne enheten og slås
+    sammen med kontoen din når du logger inn.
+
+  Se det faktiske anlegget
+  • Hver anleggsprofil viser nå satellittbilde av den virkelige plasseringen.
+  • Dobbelttrykk på bildet for å hoppe rett til anlegget på kartet.
+
+  Stabilitet
+  • Dra ned for å oppdatere i Anlegg-listen, med automatiske nye forsøk.
+
+  [ADS] • Innførte diskré annonser for å støtte videre utvikling og datatjeneren.
+
+Description additions (append the Norwegian equivalents of the new sections to
+the existing 1.0 Norwegian description):
+
+  NYTT I 1.1 — FAVORITTER SOM FØLGER DEG
+  • Trykk på stjernen på et anlegg for å legge det til som favoritt, og filtrer
+    Anlegg-listen til kun disse.
+  • Lagre et søk – tekst, statusfilter og sortering – og bruk det igjen.
+  • Logg inn med Apple eller Google (valgfritt) for å synke favoritter og søk på
+    tvers av enheter. Uten innlogging fungerer de lokalt og slås sammen med
+    kontoen når du logger inn.
+  • Hver anleggsprofil viser nå satellittbilde av den faktiske plasseringen –
+    dobbelttrykk for å åpne anlegget på kartet.
+
+  PERSONVERN (erstatt 1.0-avsnittet)
+  FjordPulse fungerer fullt ut uten konto. Innlogging med Apple eller Google er
+  valgfritt og brukes kun til å synke favorittanlegg og lagrede søk mellom
+  enhetene dine; da lagrer vi e-postadressen og en bruker-ID, ikke noe mer.
+  [ADS] Appen viser annonser via Google AdMob, som samler enhets- og bruksdata
+  for å levere dem.
+
+Keywords (max 100 characters)
+  laks,oppdrett,fiskeanlegg,Norge,lus,fjord,BarentsWatch,salmon,aquaculture,fishfarm
+
+
+--------------------------------------------------------------------------------
+15. PRE-SUBMIT CHECKLIST FOR 1.1
+--------------------------------------------------------------------------------
+
+ [ ]  Bump CURRENT_PROJECT_VERSION (build) and set MARKETING_VERSION = 1.1.
+ [ ]  Enable "Sign in with Apple" capability on the App ID and confirm the
+      provisioning profile includes it (fixes the "Unable to Verify App" path).
+ [ ]  App Privacy answers switched to YES and match privacy.html.
+ [ ]  Update privacy.html to disclose account email + user id [ADS: + AdMob].
+ [ ]  [ADS] GADApplicationIdentifier in Info.plist; ad unit IDs swapped from
+      Google TEST ids to your real AdMob unit ids before release.
+ [ ]  [ADS] Decide personalized vs non-personalized ads; add ATT prompt if
+      personalized, and set AdMob max ad content rating to G.
+ [ ]  Refresh at least one screenshot to show favorites / satellite view.
+
+
+--------------------------------------------------------------------------------
+END OF FILE
+--------------------------------------------------------------------------------
