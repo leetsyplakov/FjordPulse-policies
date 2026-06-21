@@ -260,6 +260,10 @@ Notes for Apple's reviewer:
   cross-device sync of the user's favorite farms and saved searches; we store
   only the account email, name, profile picture, and a user identifier.
 
+  ACCOUNT DELETION (Guideline 5.1.1(v)): signed-in users can permanently delete
+  their account and all server data in-app at Settings → Account → Delete
+  Account. This wipes the user record, favorites, saved searches, and sessions.
+
   [ADS] The app displays Google AdMob banner and interstitial ads. There are no
   in-app purchases and no user-generated content.
 
