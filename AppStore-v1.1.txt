@@ -178,38 +178,135 @@ rating. With that set, 4+ remains correct.
 10. APP PRIVACY (App Store Connect → App Privacy)  ***CHANGED IN 1.1***
 --------------------------------------------------------------------------------
 
-"Does this app collect any data?"  →  YES  (it was NO in 1.0).
+Full step-by-step walkthrough of the App Privacy questionnaire, matching what
+FjordPulse 1.1 actually collects. Account data is collected only when a user
+signs in (Apple/Google); ad data is collected because the build ships Google
+AdMob. Click through it exactly as below.
 
-Privacy Policy URL:
-  https://leetsyplakov.github.io/FjordPulse-policies/privacy.html
+WHAT 1.1 COLLECTS (the whole list — nothing else):
+  Account (sign-in):   Name, Email Address, User ID, Photos or Videos (avatar)
+  Advertising (AdMob): Device ID, Product Interaction, Advertising Data,
+                       Crash Data, Performance Data
 
-Declare these data types:
+················································································
+SCREEN 0 — Open App Privacy + set the policy URL
+················································································
+1. App Store Connect → Apps → FjordPulse.
+2. Left sidebar, under "General", click "App Privacy".
+3. Under "Privacy Policy", click Edit and enter:
+     https://leetsyplakov.github.io/FjordPulse-policies/privacy.html
+   Save.
+4. Under "Data Collection", click "Get Started" (first time) or "Edit".
 
-ACCOUNT (only when the user signs in — always collected once signed in):
-  • Contact Info → Email Address     — App Functionality, Linked, not tracking
-  • Contact Info → Name              — App Functionality, Linked, not tracking
-  • Identifiers → User ID            — App Functionality, Linked, not tracking
-  • User Content → Photos or Videos  — App Functionality, Linked, not tracking
-      (the profile picture from Apple/Google; Apple sends a name only on first
-       sign-in and no picture, Google provides name + a profile-photo URL)
-  (These back the cross-device favorites/searches sync. Matches the app's
-   PrivacyInfo.xcprivacy, which declares Email Address, Name, User ID, and
-   Photos or Videos for App Functionality, not tracking.)
+················································································
+SCREEN 1 — "Do you or your third-party partners collect data from this app?"
+················································································
+Choose:  YES, we collect data.    Click Next/Save.
+(It was "No" in 1.0. "Third-party partners" = Google AdMob.)
 
-[ADS] ADVERTISING (only if this build ships with AdMob) — declare per Google's
-"AdMob and the App Store data-collection" guidance:
-  • Identifiers → Device ID
-      Used for: Third-Party Advertising  (and Analytics)
-      Linked: NO (if non-personalized)   Tracking: see ATT note
-  • Usage Data → Advertising Data, Product Interaction
-      Used for: Third-Party Advertising / Analytics
-  • Diagnostics → Crash Data, Performance Data
-      Used for: App Functionality / Analytics
-  ATT NOTE: If you want PERSONALIZED ads (IDFA), you must add an App Tracking
-  Transparency prompt (NSUserTrackingUsageDescription + request) and declare
-  "Used for tracking = YES" on Device ID. If you DON'T add ATT, serve
-  non-personalized ads and declare tracking = NO. The current build has no ATT
-  prompt yet, so default to non-personalized / tracking = NO until ATT is added.
+················································································
+SCREEN 2 — Tick the data types you collect
+················································································
+A long checklist of categories appears. Check EXACTLY these nine boxes:
+
+  Contact Info
+     [x] Name
+     [x] Email Address
+  User Content
+     [x] Photos or Videos          ← the profile picture (Google avatar)
+  Identifiers
+     [x] User ID
+     [x] Device ID                 ← AdMob
+  Usage Data
+     [x] Product Interaction       ← AdMob
+     [x] Advertising Data          ← AdMob
+  Diagnostics
+     [x] Crash Data                ← AdMob / SDKs
+     [x] Performance Data          ← AdMob / SDKs
+
+Leave EVERYTHING else unchecked: no Location, Contacts, Health & Fitness,
+Financial Info, Sensitive Info, Browsing History, Search History, Purchases,
+Audio, Gameplay Content, Phone Number, Physical Address, etc.
+Click Next. App Store Connect now asks 3 questions PER checked type (Screen 3).
+
+················································································
+SCREEN 3 — For EACH data type, answer 3 questions
+················································································
+The 3 questions each time are:
+   (a) "How is this data used?"  → pick purpose(s)
+   (b) "Is this data linked to the user's identity?"  → Yes / No
+   (c) "Do you (or partners) use this data to track the user?" → Yes / No
+
+  ── Name ───────────────────────────────────────────
+     (a) App Functionality
+     (b) Linked: YES
+     (c) Tracking: NO
+
+  ── Email Address ──────────────────────────────────
+     (a) App Functionality
+     (b) Linked: YES
+     (c) Tracking: NO
+
+  ── Photos or Videos ───────────────────────────────
+     (a) App Functionality
+     (b) Linked: YES
+     (c) Tracking: NO
+
+  ── User ID ────────────────────────────────────────
+     (a) App Functionality
+     (b) Linked: YES
+     (c) Tracking: NO
+
+  ── Device ID ──────────────────────────────────────
+     (a) Third-Party Advertising
+     (b) Linked: NO
+     (c) Tracking: NO
+     (No ATT prompt in this build → non-personalized ads → not tracking.
+      If you later add an ATT prompt for personalized ads, set Tracking: YES.)
+
+  ── Product Interaction ────────────────────────────
+     (a) Third-Party Advertising
+     (b) Linked: NO
+     (c) Tracking: NO
+
+  ── Advertising Data ───────────────────────────────
+     (a) Third-Party Advertising
+     (b) Linked: NO
+     (c) Tracking: NO
+
+  ── Crash Data ─────────────────────────────────────
+     (a) App Functionality
+     (b) Linked: NO
+     (c) Tracking: NO
+
+  ── Performance Data ───────────────────────────────
+     (a) App Functionality
+     (b) Linked: NO
+     (c) Tracking: NO
+
+················································································
+SCREEN 4 — Review & Publish
+················································································
+1. Check the "nutrition label" preview:
+     • "Data Used to Track You"      → should be EMPTY (every type is Tracking: No)
+     • "Data Linked to You"          → Name, Email, Photos or Videos, User ID
+     • "Data Not Linked to You"      → Device ID, Product Interaction,
+                                        Advertising Data, Crash, Performance
+2. Click Publish.
+
+CONSISTENCY CHECK (must match):
+  • Bundled PrivacyInfo.xcprivacy declares Email Address, Name, User ID, and
+    Photos or Videos — App Functionality, Linked, not tracking. ✔ matches Screen 3.
+  • The ad types come from Google's AdMob SDK (its own privacy manifest), so list
+    them too even though our app code doesn't read them directly.
+
+IF YOU SHIP THIS BUILD WITHOUT ADS:
+  Uncheck Device ID, Product Interaction, Advertising Data, Crash Data, and
+  Performance Data on Screen 2 — keep only the 4 account types.
+
+NOTE: account data is only gathered when a user signs in, but App Privacy is
+declared at the app level, so you still list the 4 account types (collected
+"sometimes").
 
 
 --------------------------------------------------------------------------------
