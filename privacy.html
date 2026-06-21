@@ -11,7 +11,7 @@
     <header>
         <a href="./">← FjordPulse Legal</a>
         <h1>Privacy Policy</h1>
-        <p class="lede">Last updated 2026-05-28 · Effective 2026-05-28</p>
+        <p class="lede">Last updated 2026-06-20 · Effective 2026-06-20</p>
     </header>
 
     <div class="card">
@@ -22,12 +22,15 @@
         <h2>What we do not collect</h2>
         <p>FjordPulse does <strong>not</strong> collect:</p>
         <ul>
-            <li>Your name, email, phone number, postal address, or any other contact info.</li>
+            <li>Your phone number, postal address, or contact list. (If you choose to sign in, we receive
+                your name, email, and profile picture from Apple or Google — see "Accounts and sync" below.)</li>
             <li>Your precise or coarse location.</li>
             <li>Your photos, contacts, microphone, camera, calendar, health, or motion data.</li>
-            <li>Your device's advertising identifier (IDFA), unique device identifier (IDFV), or fingerprint.</li>
-            <li>Browsing, search, or interaction analytics. The app contains no analytics SDK,
-                no crash-reporting SDK, no advertising SDK, and no marketing or attribution SDK.</li>
+            <li>Any cross-app tracking. The app does not ask for App Tracking Transparency permission and
+                does not use your advertising identifier (IDFA) to track you across other apps or websites.</li>
+            <li>Analytics about how you browse or interact with the app. The app contains no separate
+                analytics, crash-reporting, marketing, or attribution SDK. (It does include Google's
+                advertising SDK to show ads — see "Advertising" below.)</li>
         </ul>
 
         <h2>What is stored on your device</h2>
@@ -36,6 +39,9 @@
             <li>UI preferences: language, map style, hide-inactive toggle, production-area overlay toggle.</li>
             <li>A non-personal App Attest key identifier (see below).</li>
             <li>A local cache of Norwegian-to-English place-name translations (only if you opt into English mode).</li>
+            <li>Your favorite farms and saved searches. These stay only on your device unless you sign in,
+                in which case they also sync to your account (see "Accounts and sync").</li>
+            <li>If you sign in, a session token kept in the iOS Keychain so you stay signed in.</li>
         </ul>
         <p>This data is removed when you delete the app.</p>
 
@@ -48,9 +54,39 @@
             <li>A static API key embedded in the app.</li>
             <li>On real iPhones/iPads, an Apple App Attest assertion — a per-device cryptographic proof
                 that you are using a genuine FjordPulse install. The proof contains no personal information.</li>
+            <li>If you sign in, your account email, name, profile picture, and a user identifier, plus your
+                favorite farms and saved searches, so they sync across your devices (see "Accounts and sync" below).</li>
         </ul>
-        <p>We do not log IP addresses or assemble any user profile. We do not share, sell, rent, or otherwise
-        disclose anything to advertisers, data brokers, or analytics providers.</p>
+        <p>We do not log IP addresses to build a profile, and we never sell or rent your information or share
+        it with data brokers. Ads are served by Google AdMob, which receives data directly through its SDK as
+        described under "Advertising" below.</p>
+
+        <h2>Accounts and sync</h2>
+        <p>FjordPulse works fully without an account. Signing in is optional. If you choose to sign in with
+        <strong>Sign in with Apple</strong> or <strong>Google</strong>, we receive and store on our server:</p>
+        <ul>
+            <li>Your account email address. With Sign in with Apple you may choose Apple's private-relay
+                address, in which case we never see your real email.</li>
+            <li>Your name and profile picture, as provided by the sign-in service. Apple shares your name
+                only on the first sign-in and never a picture; Google provides your name and a profile-photo URL.</li>
+            <li>A stable user identifier from the provider (so we can recognize your account) and a session token.</li>
+            <li>Your favorite farms and saved searches.</li>
+        </ul>
+        <p>We use this only to sync your favorites and saved searches across your devices. We do not use it for
+        advertising, profiling, or tracking, and we never sell or share it. You can sign out at any time in
+        Settings, which removes the account data from that device. To delete your account and all of its data
+        from our server, email <a href="mailto:leetsyplakov@gmail.com">leetsyplakov@gmail.com</a>.</p>
+
+        <h2>Advertising</h2>
+        <p>FjordPulse shows ads through <strong>Google AdMob</strong> (the Google Mobile Ads SDK). To deliver
+        ads, prevent fraud, and limit how often an ad is shown, Google may collect device information and in-app
+        activity, and may use a device identifier. FjordPulse does <strong>not</strong> request App Tracking
+        Transparency permission, so by default ads are non-personalized and your advertising identifier (IDFA)
+        is not used to track you across other apps and websites. Google's processing of advertising data is
+        governed by
+        <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites or apps that use our services</a>
+        and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
+        You can limit ad personalization in iOS Settings → Privacy &amp; Security → Apple Advertising.</p>
 
         <h2>App Attest</h2>
         <p>FjordPulse uses Apple's
@@ -79,12 +115,16 @@
 
         <h2>Children</h2>
         <p>FjordPulse is a general-audience information app. It is not directed at children and we do not
-        knowingly collect any data from children.</p>
+        knowingly collect any data from children. Ads are requested with a general-audience content rating.</p>
 
         <h2>Your rights</h2>
-        <p>Because FjordPulse does not collect personally identifying information, there is no personal
-        record to access, correct, or delete. To remove the on-device cache and preferences, simply
-        uninstall the app via iOS Settings → General → iPhone Storage → FjordPulse → Delete App.</p>
+        <p>If you have not signed in, FjordPulse holds no personally identifying information about you;
+        uninstalling the app removes the on-device cache and preferences (iOS Settings → General →
+        iPhone Storage → FjordPulse → Delete App).</p>
+        <p>If you have signed in, you may access, correct, or delete your account data — your name, email,
+        profile picture, user identifier, favorite farms, and saved searches — by emailing
+        <a href="mailto:leetsyplakov@gmail.com">leetsyplakov@gmail.com</a>. Signing out in Settings removes
+        the account data from that device.</p>
 
         <h2>Changes to this policy</h2>
         <p>We may update this policy. The "Last updated" date at the top of this page reflects the most

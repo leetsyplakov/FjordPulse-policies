@@ -9,15 +9,17 @@ saved searches, live satellite imagery on each farm profile, double-tap-to-map,
 and pull-to-refresh.
 
 IMPORTANT — TWO THINGS CHANGED THE PRIVACY POSTURE SINCE v1.0:
-  1. ACCOUNTS: the app now (optionally) collects an account email + user id to
-     sync favorites/searches. "Does this app collect data?" is now YES.
+  1. ACCOUNTS: the app now (optionally) collects an account email, name, profile
+     picture, and user id to sync favorites/searches. "Does this app collect
+     data?" is now YES.
   2. ADS: lines tagged [ADS] apply only if THIS build ships with the Google
      AdMob banner + interstitial. If you hold ads back, delete every [ADS] line
      and keep the "no ads" wording.
 
 ALSO UPDATE (separately, not App Store Connect fields):
-  • privacy.html on the policies site — it must now disclose the account email/
-    user id (and AdMob, if ads ship). The store privacy answers must match it.
+  • privacy.html on the policies site — it must now disclose the account email,
+    name, profile picture, and user id (and AdMob, if ads ship). The store
+    privacy answers must match it.
 
 
 --------------------------------------------------------------------------------
@@ -97,8 +99,9 @@ PRIVACY
 
 FjordPulse works fully without an account. Signing in with Apple or Google is
 optional and only enables syncing your favorite farms and saved searches across
-your devices; to do that we store your account email and a user identifier, and
-nothing more. Farm data comes from BarentsWatch via a small proxy server we
+your devices; to do that we store your account email, name, profile picture, and
+a user identifier, and nothing more. Farm data comes from BarentsWatch via a
+small proxy server we
 operate, with Apple App Attest verifying that requests come from a genuine
 install. No personal browsing or location history is collected.
 [ADS] FjordPulse shows ads through Google AdMob, which collects device and usage
@@ -183,17 +186,15 @@ Privacy Policy URL:
 Declare these data types:
 
 ACCOUNT (only when the user signs in — always collected once signed in):
-  • Contact Info → Email Address
-      Used for: App Functionality
-      Linked to the user: YES
-      Used for tracking: NO
-  • Identifiers → User ID
-      Used for: App Functionality
-      Linked to the user: YES
-      Used for tracking: NO
+  • Contact Info → Email Address     — App Functionality, Linked, not tracking
+  • Contact Info → Name              — App Functionality, Linked, not tracking
+  • Identifiers → User ID            — App Functionality, Linked, not tracking
+  • User Content → Photos or Videos  — App Functionality, Linked, not tracking
+      (the profile picture from Apple/Google; Apple sends a name only on first
+       sign-in and no picture, Google provides name + a profile-photo URL)
   (These back the cross-device favorites/searches sync. Matches the app's
-   PrivacyInfo.xcprivacy, which now declares Email Address + User ID for App
-   Functionality, not tracking.)
+   PrivacyInfo.xcprivacy, which declares Email Address, Name, User ID, and
+   Photos or Videos for App Functionality, not tracking.)
 
 [ADS] ADVERTISING (only if this build ships with AdMob) — declare per Google's
 "AdMob and the App Store data-collection" guidance:
@@ -257,7 +258,7 @@ Notes for Apple's reviewer:
   own Apple ID (Sign in with Apple) — no demo account is needed; or skip sign-in
   entirely and use favorites/searches locally. Signing in only enables
   cross-device sync of the user's favorite farms and saved searches; we store
-  only the account email and a user identifier.
+  only the account email, name, profile picture, and a user identifier.
 
   [ADS] The app displays Google AdMob banner and interstitial ads. There are no
   in-app purchases and no user-generated content.
@@ -336,7 +337,8 @@ the existing 1.0 Norwegian description):
   PERSONVERN (erstatt 1.0-avsnittet)
   FjordPulse fungerer fullt ut uten konto. Innlogging med Apple eller Google er
   valgfritt og brukes kun til å synke favorittanlegg og lagrede søk mellom
-  enhetene dine; da lagrer vi e-postadressen og en bruker-ID, ikke noe mer.
+  enhetene dine; da lagrer vi e-postadressen, navnet, profilbildet og en
+  bruker-ID, ikke noe mer.
   [ADS] Appen viser annonser via Google AdMob, som samler enhets- og bruksdata
   for å levere dem.
 
@@ -352,7 +354,8 @@ Keywords (max 100 characters)
  [ ]  Enable "Sign in with Apple" capability on the App ID and confirm the
       provisioning profile includes it (fixes the "Unable to Verify App" path).
  [ ]  App Privacy answers switched to YES and match privacy.html.
- [ ]  Update privacy.html to disclose account email + user id [ADS: + AdMob].
+ [ ]  Update privacy.html to disclose account email, name, profile picture +
+      user id [ADS: + AdMob]. (Done in this repo's privacy.html.)
  [ ]  [ADS] GADApplicationIdentifier in Info.plist; ad unit IDs swapped from
       Google TEST ids to your real AdMob unit ids before release.
  [ ]  [ADS] Decide personalized vs non-personalized ads; add ATT prompt if
