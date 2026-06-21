@@ -1,6 +1,6 @@
 ================================================================================
 FJORDPULSE — APP STORE CONNECT SUBMISSION KIT — VERSION 1.1 UPDATE
-Last edited 2026-06-20
+Last edited 2026-06-21
 ================================================================================
 
 This is the v1.1 UPDATE. Paste each section into the matching App Store Connect
@@ -12,9 +12,11 @@ IMPORTANT — TWO THINGS CHANGED THE PRIVACY POSTURE SINCE v1.0:
   1. ACCOUNTS: the app now (optionally) collects an account email, name, profile
      picture, and user id to sync favorites/searches. "Does this app collect
      data?" is now YES.
-  2. ADS: lines tagged [ADS] apply only if THIS build ships with the Google
-     AdMob banner + interstitial. If you hold ads back, delete every [ADS] line
-     and keep the "no ads" wording.
+  2. ADS: lines tagged [ADS] apply because THIS build ships with the Google
+     AdMob banner. (The full-screen interstitial is integrated but currently
+     disabled — no real unit id set — so it does not show in production yet.)
+     If you hold ads back entirely, delete every [ADS] line and keep the
+     "no ads" wording.
 
 ALSO UPDATE (separately, not App Store Connect fields):
   • privacy.html on the policies site — it must now disclose the account email,
@@ -361,8 +363,10 @@ Notes for Apple's reviewer:
   their account and all server data in-app at Settings → Account → Delete
   Account. This wipes the user record, favorites, saved searches, and sessions.
 
-  [ADS] The app displays Google AdMob banner and interstitial ads. There are no
-  in-app purchases and no user-generated content.
+  [ADS] The app displays Google AdMob banner ads. (Full-screen interstitial ads
+  are integrated in the code but currently disabled in this build; if enabled
+  later they would appear occasionally between farm views.) There are no in-app
+  purchases and no user-generated content.
 
   Source: https://github.com/leetsyplakov/FjordPulse
   Privacy: https://leetsyplakov.github.io/FjordPulse-policies/privacy.html
